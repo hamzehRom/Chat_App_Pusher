@@ -16,20 +16,22 @@ use Illuminate\Support\Facades\Broadcast;
 
 Broadcast::channel('chat.{id}', function ($user, $id) {
 
-    $user->id = 1;
-    $user -> save();
+//    $user->id = 1;
+//    $user -> save();
+//
+//    if ($user->id == null)
+//        return null;
+//
+//    $participant = ChatParticioant::where([
+//        [
+//            'user_id',1,
+//        ],
+//        [
+//            'chat_id',$id
+//        ]
+//    ])->first();
 
-    if ($user->id == null)
-        return null;
+//    return $participant !== null;
 
-    $participant = ChatParticioant::where([
-        [
-            'user_id',1,
-        ],
-        [
-            'chat_id',$id
-        ]
-    ])->first();
-
-    return $participant !== null;
+    return true;
 });
