@@ -33,7 +33,8 @@ class NewMessageSent implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        return new Channel('fawaz');
+        return new PrivateChannel('fawaz');
+       // return new Channel('fawaz');
         //return new PrivateChannel('chat.' . $this->chatMessage->chat_id);
     }
 

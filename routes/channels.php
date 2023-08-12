@@ -37,6 +37,6 @@ Broadcast::channel('chat.{id}', function ($user, $id) {
 });
 
 
-Broadcast::channel('fawaz', function () {
+Broadcast::channel('fawaz', function ($user) {
     return true;
 });
