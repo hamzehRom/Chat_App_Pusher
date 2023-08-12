@@ -33,7 +33,8 @@ class NewMessageSent implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('chat.' . $this->chatMessage->chat_id);
+        return new Channel('fawaz');
+        //return new PrivateChannel('chat.' . $this->chatMessage->chat_id);
     }
 
     /**
@@ -41,10 +42,10 @@ class NewMessageSent implements ShouldBroadcastNow
      *
      * @return string
      */
-    public function broadcastAs(): string
-    {
-        return 'message.sent';
-    }
+//    public function broadcastAs(): string
+//    {
+//        return 'message.sent';
+//    }
 
     /**
      * Data sending back to client
@@ -54,8 +55,9 @@ class NewMessageSent implements ShouldBroadcastNow
     public function broadcastWith(): array
     {
         return [
-            'chat_id' => $this->chatMessage->chat_id,
-            'message' => $this->chatMessage->toArray(),
+//            'chat_id' => $this->chatMessage->chat_id,
+//            'message' => $this->chatMessage->toArray(),
+               'message' => 'you are listen to the event correctly congratulations hamzah!'
         ];
     }
 }
